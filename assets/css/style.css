@@ -631,7 +631,7 @@
 .itemPie {
     color: #ffffff;
     font-weight: 400;
-    font-size: clamp(.9rem, 2vw, .95rem);
+    font-size: clamp(1rem, 2vw, 1rem);
     opacity: .8;
 }
 

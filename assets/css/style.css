@@ -249,43 +249,12 @@
     width: 100%;
     height: 90vh;
     position: relative;
+    background: linear-gradient(to top, rgba(47, 79, 79, .6) 100%, rgba(47, 79, 79, .5) 10%), url(../img/fondo3.jpg);
+    background-position: center;
+    background-size: cover;
 }
-
-.mySwiper {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    z-index: -10;
-    overflow: hidden;
-}
-
-.swiper-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.swiper-slide {
-    height: 100%;
-}
-
-.swiper-slide .imagenSlider {
-    height: 100%;
-    object-fit: cover;
-}
-
-.capa {
-    background-image: linear-gradient(to top, rgba(47, 79, 79, .6) 100%, rgba(47, 79, 79, .5) 10%);
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    z-index: 100;
-}
-
 .contenedorContenido {
-    position: absolute;
-    inset: 0;
     height: 100%;
-    z-index: 101;
     display: flex;
     align-items: center;
 }
@@ -1071,7 +1040,8 @@
     }
 
     .inicio {
-        height: 80vh;
+        height: auto;
+        padding: 2rem 0;
     }
 
     .contenedorContenido,
@@ -1302,12 +1272,7 @@
     }
     .botonContacto {
         padding: .8rem 2rem;
-    }
-    .inicio {
-        height: 100vh;
-    }
-
-    
+    } 
 
     .contenedorImagen,
     .nuevaServi img {

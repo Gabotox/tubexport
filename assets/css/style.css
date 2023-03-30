@@ -91,10 +91,12 @@
     display: flex;
     align-items: center;
 }
+
 .botonContacto i {
     font-size: clamp(1.4rem, 3vw, 1.8rem);
     margin-left: .5rem;
 }
+
 .botonContacto:hover,
 .boton:hover,
 .botonNosotros:hover {
@@ -253,6 +255,7 @@
     background-position: center;
     background-size: cover;
 }
+
 .contenedorContenido {
     height: 100%;
     display: flex;
@@ -342,10 +345,11 @@
     align-items: center;
     /* border-radius: 1rem;
     overflow: hidden; */
-    
+
     width: 500px;
     height: 400px;
 }
+
 .subCont {
     /* display: flex;
     justify-content: flex-end; */
@@ -358,6 +362,7 @@
     background: rgba(0, 0, 0, .2);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
+
 .contenedorImagen img {
     width: 95%;
     height: 100%;
@@ -502,9 +507,11 @@
     border-bottom: 2px solid #ffffff34;
     padding: 2rem 0;
 }
+
 .logoInfoPie {
     padding-right: 1rem;
 }
+
 .logoPie {
     text-decoration: none;
     font-size: clamp(1.8rem, 3vw, 3rem);
@@ -516,18 +523,22 @@
     border-bottom-right-radius: .2rem;
     border-top-left-radius: .2rem;
 }
-.logoPie::after, .logoPie::before {
+
+.logoPie::after,
+.logoPie::before {
     content: '';
     position: absolute;
     width: 40%;
     height: .3rem;
     background-image: linear-gradient(to right, #d9af4a, #ddb65c, #e0be6d, #e4c57e, #e7cc8f);
-}   
+}
+
 .logoPie::after {
     bottom: 0;
     left: 0;
     transform: translateY(100%);
 }
+
 .logoPie::before {
     top: 0;
     right: 0;
@@ -604,7 +615,7 @@
 }
 
 .hora {
-    font-size: clamp(.85rem, 2vw, .9rem);
+    line-height: 1.6;
 }
 
 .liPie a {
@@ -646,7 +657,7 @@
     font-size: clamp(4rem, 6vw, 6rem);
     color: #e4c57e;
     text-shadow: 2px 1px 2px #fff;
-    
+
 }
 
 .contenedorContenidoNueva,
@@ -937,12 +948,14 @@
         transition: all .5s ease;
         padding: 0 4rem;
     }
+
     .contNavLogo {
         display: block;
         width: 100% !important;
     }
+
     .navLogo {
-        text-decoration: none; 
+        text-decoration: none;
         color: #e4c57e;
         width: max-content;
         font-weight: 700;
@@ -954,24 +967,28 @@
         border-top-left-radius: .2rem;
         background: #00a051;
     }
-    .navLogo::after, .navLogo::before {
+
+    .navLogo::after,
+    .navLogo::before {
         content: '';
         position: absolute;
         width: 60%;
         height: .2rem;
         background-image: linear-gradient(to right, #d9af4a, #ddb65c, #e0be6d, #e4c57e, #e7cc8f);
-    }   
+    }
+
     .navLogo::after {
         bottom: 0;
         left: 0;
         transform: translateY(100%);
     }
+
     .navLogo::before {
         top: 0;
         right: 0;
         transform: translateY(-100%);
     }
-    
+
 
     .ul {
         width: 100%;
@@ -1131,14 +1148,29 @@
         grid-template-columns: 1fr;
         gap: 40px;
     }
+
     .listaPie {
         justify-content: flex-start;
-        gap: 40px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .ulPie {
+        gap: 30px;
+    }
+
+    .ulPie:nth-child(1) .liPie:not(:first-child) {
+        margin: 1.5rem 0;
+    }
+
+    .liPie a, .itemPie {
+        padding: .9rem 2rem;
+        font-size: 1.05rem;
     }
 }
 
 @media screen and (max-width: 450px) {
-    
+
     .boton {
         padding: .6rem 2rem;
     }
@@ -1205,10 +1237,7 @@
         padding-right: .4rem;
     }
 
-    .listaPie {
-        flex-direction: column;
-        gap: 30px;
-    }
+    
 
 
 }
@@ -1223,9 +1252,11 @@
     .tituloContenido {
         font-size: clamp(2.5rem, 8vw, 5rem);
     }
+
     .navContacto {
         padding: 0 2rem;
     }
+
     .botones {
         flex-direction: column;
     }
@@ -1235,9 +1266,10 @@
     .navLogo {
         font-size: clamp(3rem, 6vw, 5rem);
     }
+
     .botonContacto {
         padding: .8rem 2rem;
-    } 
+    }
 
     .contenedorImagen,
     .nuevaServi img {

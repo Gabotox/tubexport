@@ -1,0 +1,1348 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.anuncio {
+    background-image: linear-gradient(to right bottom, #008145, #00914c, #00a254, #00b35b, #00c462);
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7rem;
+}
+
+.anun {
+    padding-right: .5rem;
+}
+
+.anun a {
+    color: #e7cc8f;
+    margin-left: .6rem;
+    text-decoration: none;
+}
+
+.contImgAnun {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contImgAnun img {
+    width: 40px;
+    height: 20px;
+}
+
+.cabecera {
+    width: 100%;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 99999999;
+}
+
+.header,
+.contenedorContenido,
+.contenedorNosotros,
+.contenedorServicios,
+.contenedorContacto {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+}
+
+.logo {
+    text-decoration: none;
+    width: 180px;
+    height: 90px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navContacto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.botonContacto {
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(to right bottom, #008145, #00914c, #00a254, #00b35b, #00c462);
+    padding: .8rem 2rem;
+    border-radius: 1rem;
+    font-size: clamp(.95rem, 2.5vw, 1rem);
+    transition: .5s;
+    display: flex;
+    align-items: center;
+}
+.botonContacto i {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    margin-left: .5rem;
+}
+.botonContacto:hover,
+.boton:hover,
+.botonNosotros:hover {
+    transform: scale(1.05);
+}
+
+.ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.li {
+    margin: 0 1rem;
+}
+
+.item {
+    color: #000000;
+    text-decoration: none;
+    font-size: clamp(.95rem, 2.5vw, 1rem);
+    position: relative;
+    padding-bottom: .3rem;
+}
+
+.item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #008145;
+    transition: .5s ease;
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background: #d9af4a;
+    transition: .5s ease;
+}
+
+.li:hover .item::after {
+    width: 50%;
+    transform: translate(100%);
+}
+
+.li:hover .item::before {
+    width: 50%;
+    transform: translate(-100%);
+}
+
+.responsive {
+    background-image: linear-gradient(to right bottom, #008145, #00914c, #00a254, #00b35b, #00c462);
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+}
+
+.responsive i {
+    padding: .6rem .7rem;
+    font-size: 1.8rem;
+}
+
+.cerrar {
+    display: none;
+}
+
+.informaciónContenido,
+.infoServi,
+.infoNosotros,
+.informaciónContenidoNueva,
+.textoInfoNos,
+.informaciónContenidoNueva,
+.infoNuevaContacto,
+.nuevaContact p,
+.boton {
+    line-height: 1.4;
+    font-size: clamp(1rem, 3vw, 1.07rem);
+    font-weight: 400;
+}
+
+@keyframes entrar {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.informaciónContenido,
+.botones,
+.subtituloContenido,
+.tituloContenido,
+.tituloContenidoNueva,
+.tituloContenidoNuevaServicios,
+.tituloContenidoNuevaServicios {
+    animation: entrar 2s 1 ease;
+}
+
+.informaciónContenido {
+    margin-top: .5rem;
+    width: 60%;
+    color: #fff;
+}
+
+.infoServi,
+.informaciónContenidoNueva,
+.infoNuevaContacto,
+.nuevaContact p,
+.infoNosotros,
+.boton {
+    color: #000000;
+}
+
+.infoNosotros {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-right: 20px;
+}
+
+.informaciónContenidoNueva {
+    width: 70%;
+}
+
+.inicio,
+.mySwiper,
+.swiper-slide .imagenSlider,
+.capa,
+.nosotros,
+.servicios,
+.contacto,
+.nuevaServicios,
+.conteNuevaServicios,
+.contImgServi,
+.cajaNuevaContacto,
+.contNuevaMapa iframe,
+.nuevaNosotros {
+    width: 100%;
+}
+
+.inicio {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+
+.mySwiper {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    z-index: -10;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide {
+    height: 100%;
+}
+
+.swiper-slide .imagenSlider {
+    height: 100%;
+    object-fit: cover;
+}
+
+.capa {
+    background-image: linear-gradient(to top, rgba(47, 79, 79, .6) 100%, rgba(47, 79, 79, .5) 10%);
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    z-index: 100;
+}
+
+.contenedorContenido {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    z-index: 101;
+    display: flex;
+    align-items: center;
+}
+
+.tituloContenido {
+    font-size: clamp(3rem, 8vw, 5rem);
+    color: #FAE283;
+    text-shadow: 2px 1px 2px #fff;
+}
+
+.subtituloContenido {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: .5rem;
+    color: #fff;
+}
+
+
+
+.botones {
+    width: max-content;
+    display: flex;
+    gap: 10px;
+    margin-top: 1.5rem;
+}
+
+.boton {
+    text-decoration: none;
+    background-image: linear-gradient(to right, #d9af4a, #ddb65c, #e0be6d, #e4c57e, #e7cc8f);
+    padding: .8rem 3rem;
+    border-radius: 1rem;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+}
+
+.boton i {
+    margin-left: .5rem;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    color: #000000;
+}
+
+.nosotros,
+.servicios,
+.contacto,
+.nuevaServicios {
+    padding: 6rem 0;
+}
+
+.botonNosotros {
+    text-decoration: none;
+    border-radius: .5rem;
+    padding: .6rem 2rem;
+    background-image: linear-gradient(to right, #00914c, #00964e, #009b50, #00a051, #00a553);
+    color: #ffffff;
+    transition: .5s;
+    display: flex;
+    width: max-content;
+    font-size: clamp(1rem, 2vw, 1.07rem);
+}
+
+.botonNosotros i {
+    margin-left: .5rem;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+.contenedorNosotros,
+.servi,
+.contactar,
+.contenendorInfoNos,
+.grilla,
+.conServicios,
+.nuevaServi,
+.grillaContacto {
+    display: grid;
+}
+
+.contenedorNosotros {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+
+.contenedorImagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 1rem;
+    overflow: hidden; */
+    
+    width: 500px;
+    height: 400px;
+}
+.subCont {
+    /* display: flex;
+    justify-content: flex-end; */
+    position: relative !important;
+    width: 100%;
+    height: 100%;
+    /* background: url(../img/empresa.jpg);
+    background-position: center;
+    background-size: cover; */
+    background: rgba(0, 0, 0, .2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.contenedorImagen img {
+    width: 95%;
+    height: 100%;
+    position: absolute;
+    transform: translate(-2px, -20px);
+}
+
+.servi {
+    margin-top: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.numeroServicio {
+    background-image: linear-gradient(to right, #00914c, #00964e, #009b50, #00a051, #00a553);
+    color: #ffffff;
+    padding: 1rem;
+    font-size: clamp(1rem, 2vw, 1.03rem);
+}
+
+.back {
+    width: 100%;
+    background: linear-gradient(to top, rgba(47, 79, 79, .6) 100%, rgba(47, 79, 79, .5) 10%),
+        url(https://live.staticflickr.com/65535/52780654884_8abd266e93_z.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 6rem;
+}
+
+.contenedorBack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 6rem 1rem;
+    text-align: center;
+    z-index: 20;
+    background: linear-gradient(to right bottom, rgba(0, 145, 76, .4), rgba(0, 145, 76, .3));
+}
+
+.tituloBack {
+    letter-spacing: -2px;
+    font-size: clamp(4rem, 8vw, 8rem);
+    color: #FAE283;
+    text-shadow: 2px 1px 2px #fff;
+    line-height: 85%;
+}
+
+.textoBack {
+    color: #fff;
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+
+.contacto {
+    margin: 0 auto;
+    padding-top: 8rem;
+}
+
+.contactar {
+    margin-top: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    place-items: center;
+}
+
+.contenedorMapaContacto {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    width: 600px;
+    height: 450px;
+}
+
+.contenedorMapaContacto iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.descripcionContacto {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top,
+            rgba(47, 79, 79, .6) 100%,
+            rgba(47, 79, 79, .5) 10%),
+        url(https://live.staticflickr.com/65535/52780873818_3a89a4e901_z.jpg);
+    background-size: cover;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.colorContacto {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    background-image: linear-gradient(to bottom,
+            rgba(0, 145, 76, .5) 0%,
+            rgba(0, 150, 78, .5) 25%,
+            rgba(0, 155, 80, .5) 50%,
+            rgba(0, 160, 81, .5) 75%,
+            rgba(0, 165, 83, .5) 100%);
+    width: max-content;
+    height: max-content;
+    padding: 1rem;
+    border-radius: .8rem;
+    text-align: left;
+}
+
+.contact {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    padding: .4rem 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.contact i {
+    width: 40px;
+    margin-right: .5rem;
+    color: #ddb65c;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.pie {
+    width: 100%;
+    padding: 2rem 0;
+    margin: 0 auto;
+    background: url(../img/fondoPieP.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.footer {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 2px solid #ffffff34;
+    padding: 2rem 0;
+}
+.logoInfoPie {
+    padding-right: 1rem;
+}
+.logoPie {
+    text-decoration: none;
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: 700;
+    color: #e0be6d;
+    position: relative;
+    background: #00a051;
+    padding: .4rem 1rem;
+    margin-bottom: 2rem;
+    border-bottom-right-radius: .2rem;
+    border-top-left-radius: .2rem;
+}
+.logoPie::after, .logoPie::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: .3rem;
+    background-image: linear-gradient(to right, #d9af4a, #ddb65c, #e0be6d, #e4c57e, #e7cc8f);
+}   
+.logoPie::after {
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+}
+.logoPie::before {
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+}
+
+.textoInfoPie {
+    margin: 1rem 0;
+    margin-top: 2rem;
+    font-size: clamp(.95rem, 2vw, 1rem);
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.redesPie {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.redPie {
+    color: #e0be6d;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    margin: 0 .7rem;
+    transition: .5s ease;
+}
+
+.listaPie {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.ulPie {
+    list-style: none;
+}
+
+.liPie:not(:first-child) {
+    margin: .5rem 0;
+}
+
+.tituloListaPie {
+    font-weight: 500;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    position: relative;
+    padding-right: .4rem;
+    color: #e0be6d;
+    margin-bottom: 1rem;
+    width: max-content;
+}
+
+.tituloListaPie::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    margin: auto 0;
+    width: .8rem;
+    height: .2rem;
+    background: #e0be6d;
+    opacity: .7;
+    border-radius: 5px;
+}
+
+.liPie a,
+.itemPie {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: clamp(.9rem, 2vw, .95rem);
+    opacity: .8;
+}
+
+.hora {
+    font-size: clamp(.85rem, 2vw, .9rem);
+}
+
+.liPie a {
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.liPie a:hover {
+    opacity: 1;
+}
+
+.logoPie {
+    width: 200px;
+}
+
+.logoPie img {
+    width: 100%;
+}
+
+.creditos {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.cred {
+    color: #fff;
+    line-height: 1.4;
+}
+
+.cred a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.tituloContenidoNueva,
+.tituloContenidoNuevaServicios,
+.tituloContenidoNuevaServicios {
+    font-size: clamp(4rem, 6vw, 6rem);
+    color: #e4c57e;
+    text-shadow: 2px 1px 2px #fff;
+    
+}
+
+.contenedorContenidoNueva,
+.contDescripNuevaNosotros,
+.contenendorInfoNos,
+.contenedorNuevaServicios,
+.contenedorProductos {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.nuevaNosotros {
+    padding: 6rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../img/fondo3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.descripNuevaNosotros,
+.informacionNos,
+.productos {
+    padding: 4rem 0;
+    width: 100%;
+}
+
+.contenendorInfoNos {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tituloDescripNuevaNosotros,
+.misionVision,
+.tituloProductos,
+.tituloNuevaServi,
+.mapaCompleto h2,
+.redesNuevaContacto a,
+.tituloServicios,
+.tituloNosotros,
+.tituloContacto {
+    font-size: clamp(2rem, 3vw, 3rem);
+    position: relative;
+    background-image: linear-gradient(to right, #00914c, #00964e, #009b50, #00a051, #00a553);
+    width: max-content;
+    padding: .7rem 2rem;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+.tituloDescripNuevaNosotros::after,
+.misionVision::after,
+.tituloProductos::after,
+.tituloNuevaServi::after,
+.mapaCompleto h2::after,
+.redesNuevaContacto a::after,
+.tituloServicios::after,
+.tituloNosotros::after,
+.tituloContacto::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 1rem;
+    background-image: linear-gradient(to right, #d9af4a, #ddb65c, #e0be6d, #e4c57e, #e7cc8f);
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+}
+
+.mapaCompleto h2 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.redesNuevaContacto a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.07rem);
+    transition: .4s ease;
+    margin: 0;
+}
+
+.mapaCompleto h2::after,
+.redesNuevaContacto a::after {
+    height: .4rem;
+}
+
+.cajaInfoNos {
+    padding: 1rem;
+}
+
+.tituloProductos {
+    margin-bottom: 4rem;
+}
+
+.grilla {
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: 20px;
+}
+
+.grilla img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s ease;
+}
+
+.grilla img:nth-child(4) {
+    grid-column-start: span 2;
+}
+
+.grilla img:nth-child(5) {
+    grid-row-start: span 2;
+}
+
+
+.grilla img:hover {
+    transform: scale(1.05);
+}
+
+
+
+.nuevaServicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../img/fondo3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.conteNuevaServicios {
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.conServicios {
+    width: 85%;
+    margin: 0 auto;
+    row-gap: 20px;
+}
+
+.nuevaServi {
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: center;
+}
+
+.letraServi {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+
+.tituloNuevaServi {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.contImgServi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.nuevaServi img {
+    width: 60%;
+    height: 100%;
+    align-self: flex-end;
+    object-fit: cover;
+}
+
+
+
+.conContacto {
+    width: 85%;
+    margin: 0 auto;
+    row-gap: 20px;
+}
+
+.grillaContacto {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.cajaNuevaContacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+}
+
+.cajaNuevaContacto:nth-child(1) {
+    grid-column-start: span 2;
+}
+
+.redesNuevaContacto {
+    margin-top: 2rem;
+    display: flex;
+    gap: 20px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.redesNuevaContacto a i {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+}
+
+.redesNuevaContacto a:hover {
+    transform: scale(.95);
+}
+
+
+.colorNuevaContacto {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.nuevaContact {
+    padding: .4rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.nuevaContact i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .8rem;
+    background: #008145;
+    color: #ffffff;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.mapaCompleto {
+    margin-top: 3rem;
+    text-align: left;
+    padding: 1rem;
+}
+
+.contNuevaMapa {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    width: 800px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.contNuevaMapa iframe {
+    height: 100%;
+}
+
+.contNavLogo {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .contenedorImagen {
+        width: 400px;
+        height: 300px;
+    }
+
+    .contenedorMapaContacto {
+        width: 100%;
+    }
+
+    .nuevaServi img {
+        width: 80%;
+    }
+
+    .contNuevaMapa {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 1rem 0;
+        padding-top: 2rem;
+    }
+
+    .navContacto {
+        position: fixed;
+        top: 0;
+        left: -200%;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 129, 69, .9);
+        flex-flow: column;
+        justify-content: center;
+        align-items: flex-start;
+        transition: all .5s ease;
+        padding: 0 4rem;
+    }
+    .contNavLogo {
+        display: block;
+        width: 100% !important;
+    }
+    .navLogo {
+        text-decoration: none; 
+        color: #e4c57e;
+        width: max-content;
+        font-weight: 700;
+        margin: 0 auto;
+        padding: .1rem 2rem;
+        font-size: clamp(4rem, 6vw, 5rem);
+        position: relative;
+        border-bottom-right-radius: .2rem;
+        border-top-left-radius: .2rem;
+        background: #00a051;
+    }
+    .navLogo::after, .navLogo::before {
+        content: '';
+        position: absolute;
+        width: 60%;
+        height: .2rem;
+        background-image: linear-gradient(to right, #d9af4a, #ddb65c, #e0be6d, #e4c57e, #e7cc8f);
+    }   
+    .navLogo::after {
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+    }
+    .navLogo::before {
+        top: 0;
+        right: 0;
+        transform: translateY(-100%);
+    }
+    
+
+    .ul {
+        width: 100%;
+        height: 100%;
+        align-items: flex-start;
+        flex-flow: column;
+        margin-top: 1rem;
+    }
+
+    .ul .li {
+        margin: 1rem 0;
+    }
+
+    .ul .li .item {
+        color: #fff;
+        font-size: clamp(1rem, 6vw, 1.2rem);
+    }
+
+    .cerrar {
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: 20px;
+        background-image: linear-gradient(to right bottom, #008145, #00914c, #00a254, #00b35b, #00c462);
+        color: #fff;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+    .botonContacto {
+        padding: .8rem 4rem;
+        font-size: clamp(1rem, 5vw, 1.2rem);
+        background-image: linear-gradient(to right, #d9af4a, #ddb65c, #e0be6d, #e4c57e, #e7cc8f);
+        color: #008145;
+    }
+
+    .cerrar i {
+        padding: .9rem 1.2rem;
+        font-size: 1.6rem;
+    }
+
+    .responsive {
+        display: block;
+    }
+
+    .inicio {
+        height: 80vh;
+    }
+
+    .contenedorContenido,
+    .conContacto {
+        width: 95%;
+    }
+
+    .informaciónContenido,
+    .contenedorImagen {
+        width: 80%;
+    }
+
+    .boton {
+        padding: .8rem 3rem;
+    }
+
+    .contenedorNosotros,
+    .contactar,
+    .servi,
+    .contenendorInfoNos,
+    .grillaContacto,
+    .nuevaServi {
+        grid-template-columns: 1fr;
+    }
+
+    .productos {
+        padding: 0;
+        padding-bottom: 6rem;
+    }
+
+    .nuevaServi {
+        gap: 20px;
+    }
+
+    .nuevaServi img {
+        height: 250px;
+        align-self: flex-start;
+    }
+
+    .conServicios {
+        row-gap: 60px;
+    }
+
+    .contenedorImagen {
+        margin-top: 4rem;
+        height: 400px;
+    }
+
+    .informaciónContenidoNueva,
+    .contenedorMapaContacto,
+    .grilla {
+        width: 100%;
+    }
+
+    .contenedorMapaContacto {
+        height: 450px;
+    }
+
+    .descripcionContacto {
+        height: 300px;
+    }
+
+
+    .grilla {
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grilla img:nth-child(3) {
+        grid-column-start: span 2;
+    }
+
+    .grilla img:nth-child(4) {
+        grid-column-start: span 1;
+    }
+
+    .grilla img:hover {
+        transform: scale(1.02);
+    }
+
+
+    .mapaCompleto,
+    .cajaNuevaContacto,
+    .contacto {
+        padding: 0;
+    }
+
+    .contacto {
+        padding-bottom: 6rem;
+    }
+
+    .cajaNuevaContacto {
+        align-items: flex-start;
+    }
+
+    .redesNuevaContacto {
+        row-gap: 20px;
+    }
+
+    .cajaNuevaContacto:nth-child(2) {
+        margin-top: 3rem;
+    }
+
+    .colorNuevaContacto {
+        gap: 10px;
+    }
+
+    .mapaCompleto h2 {
+        margin-bottom: 2rem;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .listaPie {
+        justify-content: flex-start;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    
+    .boton {
+        padding: .6rem 2rem;
+    }
+
+    .tituloNosotros,
+    .tituloServicios,
+    .tituloContacto,
+    .tituloProductos {
+        font-size: clamp(1.8rem, 3vw, 3rem);
+    }
+
+    .contenedorContenido {
+        padding: 8rem 0;
+    }
+
+    .informaciónContenido,
+    .contenedorImagen,
+    .textoBack,
+    .contNuevaMapa {
+        width: 100%;
+    }
+
+    .contenedorImagen {
+        height: 300px;
+    }
+
+    .tituloBack {
+        font-size: clamp(3rem, 8vw, 4rem);
+    }
+
+    .cajaInfoNos,
+    .contact {
+        margin: 1rem 0;
+    }
+
+    .cajaInfoNos {
+        padding: 0;
+    }
+
+    .conServicios {
+        width: 95%;
+    }
+
+    .nuevaServi img {
+        align-self: flex-start;
+        width: 80%;
+        height: 170px;
+    }
+
+    .contenedorMapaContacto {
+        height: 350px;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact i {
+        width: 0;
+        padding-bottom: .5rem;
+    }
+
+    .tituloProductos {
+        padding-left: .4rem;
+        padding-right: .4rem;
+    }
+
+    .contNuevaMapa {
+        height: 300px;
+    }
+
+    .listaPie {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+}
+
+@media screen and (max-width: 350px) {
+    .anuncio {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .tituloContenido {
+        font-size: clamp(2.5rem, 8vw, 5rem);
+    }
+    .navContacto {
+        padding: 0 2rem;
+    }
+    .botones {
+        flex-direction: column;
+    }
+    .mapaCompleto h2 {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .navLogo {
+        font-size: clamp(3rem, 6vw, 5rem);
+    }
+    .botonContacto {
+        padding: .8rem 2rem;
+    }
+    .inicio {
+        height: 100vh;
+    }
+
+    
+
+    .contenedorImagen,
+    .nuevaServi img {
+        width: 100%;
+    }
+
+    .contenedorImagen {
+        height: 200px;
+    }
+
+    .tituloNosotros,
+    .tituloServicios,
+    .tituloContacto,
+    .tituloProductos {
+        font-size: clamp(1.5rem, 3vw, 3rem);
+        padding: .7rem 1rem;
+    }
+
+    .grilla {
+        grid-template-columns: 1fr;
+    }
+
+    .grilla img {
+        width: 100%;
+    }
+
+    .grilla img:nth-child(3) {
+        grid-column-start: span 1;
+    }
+
+    .grilla img:nth-child(4) {
+        grid-column-start: span 1;
+    }
+
+    .grilla img:nth-child(5) {
+        grid-row-start: span 1;
+    }
+}

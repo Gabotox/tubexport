@@ -382,7 +382,7 @@
 .back {
     width: 100%;
     background: linear-gradient(to top, rgba(47, 79, 79, .6) 100%, rgba(47, 79, 79, .5) 10%),
-        url(https://live.staticflickr.com/65535/52780654884_8abd266e93_z.jpg);
+        url(../img/troncos4.jpeg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -446,7 +446,7 @@
     background-image: linear-gradient(to top,
             rgba(47, 79, 79, .6) 100%,
             rgba(47, 79, 79, .5) 10%),
-        url(https://live.staticflickr.com/65535/52780873818_3a89a4e901_z.jpg);
+        url(../img/ubicacion.jpg);
     background-size: cover;
     padding: 1rem;
     position: relative;

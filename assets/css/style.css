@@ -435,7 +435,7 @@
     height: 450px;
 }
 
-.contenedorMapaContacto iframe {
+.contenedorMapaContacto img {
     width: 100%;
     height: 100%;
 }
@@ -900,23 +900,6 @@
     font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-.mapaCompleto {
-    margin-top: 3rem;
-    text-align: left;
-    padding: 1rem;
-}
-
-.contNuevaMapa {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    width: 800px;
-    height: 450px;
-    margin: 0 auto;
-}
-
-.contNuevaMapa iframe {
-    height: 100%;
-}
-
 .contNavLogo {
     display: none;
 }
@@ -933,10 +916,6 @@
 
     .nuevaServi img {
         width: 80%;
-    }
-
-    .contNuevaMapa {
-        width: 90%;
     }
 }
 
@@ -1149,10 +1128,6 @@
         gap: 10px;
     }
 
-    .mapaCompleto h2 {
-        margin-bottom: 2rem;
-    }
-
     .footer {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1182,8 +1157,7 @@
 
     .informaciónContenido,
     .contenedorImagen,
-    .textoBack,
-    .contNuevaMapa {
+    .textoBack {
         width: 100%;
     }
 
@@ -1232,10 +1206,6 @@
         padding-right: .4rem;
     }
 
-    .contNuevaMapa {
-        height: 300px;
-    }
-
     .listaPie {
         flex-direction: column;
         gap: 30px;
@@ -1259,10 +1229,6 @@
     }
     .botones {
         flex-direction: column;
-    }
-    .mapaCompleto h2 {
-        padding-right: 1rem;
-        padding-left: 1rem;
     }
 }
 
